@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>반띵 서비스</title>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+	<link href="<https://webfontworld.github.io/PyeongChang/PyeongChangPeace.css>" rel="stylesheet">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+	<link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+	<style type="text/css">
+	@font-face {
+	font-family: 'PyeongChangPeace-Bold';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+
+	font-weight: 700;
+	font-style: normal;}
+	@font-face {
+    font-family: 'PyeongChangPeace';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChangPeace-Light.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChangPeace-Light.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChangPeace-Light.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChangPeace-Light.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/PyeongChang/PyeongChangPeace-Light.ttf') format("truetype");
+    font-display: swap;}
+	@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+	html{font-family: 'Noto Sans KR', sans-serif; font-size:30px; text-align:center;scroll-behavior: smooth;}
+	body{margin:0; padding:0; background-color:rgb(235, 236, 237);position:relative; margin-bottom:0; scroll-behavior: smooth;}
+	div{margin:auto;}
+	.flex{display:flex;}
+	.navbar{max-width:100%; height:50px;}
+	nav {
+	  position: fixed;
+	  z-index: 1000;
+	  width: 100%;
+	  height: 50px;
+	  background-color:rgb(0, 58, 255);
+	}
+
+	nav ul {
+		
+	  display: flex;
+	  padding: 0;
+	  margin: 0;
+	  justify-content: space-between;
+	  align-items: center; height:50px;
+	}
+
+	nav ul li {
+		margin:auto;
+	  list-style-type: none; height:40px; width: 100px; background-color:rgb(0, 58, 255)
+	}
+
+	nav ul li a {
+	  display: block;
+	  color: #333;
+	  text-decoration: none;
+	  font-size: 20px;
+	  font-weight: bold;
+	margin-top:-20px;
+	  transition: all 0.3s ease-in-out;width:100px; height:50px; }
+
+	.a{margin-top:-25px;}
+	nav ul li a:hover {
+	 
+	  color: #fff;
+	}
+
+	.navbox {
+	  display: block;
+	  border-radius: 20px;
+	  background-color: #ff256f;
+	  height: 35px;
+	  width: 100px; margin-top:9px;
+	
+	}
+
+	nav ul li.navbox a {
+	  padding: 0;
+	}
+
+	nav ul li.navbox a:hover {
+	  
+	  color:white;
+	}
+
+	@media screen and (max-width: 768px) {
+	  nav ul {
+	    flex-direction: column;
+	    
+	    position: fixed;
+	    top: 50px;
+	    left: -100%;
+	    transition: all 0.3s ease-in-out;
+	  }
+	  nav ul li {
+	    display: block;
+	    margin-top: 20px;
+	  }
+	  nav ul li a {
+	    font-size: 18px;
+	    padding: 15px 20px;
+	  }
+	  nav ul.show {
+	    left: 0;
+	  }
+	}
+
+	.car{margin-top:-60px;}
+	header{max-width:1100px; margin:auto; padding-top: 60px; margin-bottom:200px;}
+	h1{font-size: 120px; font-family: 'PyeongChangPeace-Bold'; margin-bottom:50px;}
+	.bluetext{color:rgb(0, 58, 255);}
+	.blue{background-color:rgb(0, 58, 255);}
+	.box1{background-color:rgb(0, 58, 255);height:80px; max-width:900px;margin:auto;}
+	.box1text{padding-top:20px; color:white; font-weight:medium;}
+	em{font-style:normal; border-bottom:4px solid rgb(255, 37, 111);}
+	.black{background-color:black;}
+	.one{max-width:1200px; margin:auto;}
+	.happy{padding-top:150px; padding-bottom:80px; position:relative;}
+	.titletext{font-weight:bold; font-size:45px;}
+	.white{color:white;}
+	.auto{margin:auto;}
+	.t1{padding-top:40px;}
+	.ex{width:1200px; display: flex; justify-content: center; gap:70px;padding-top: 50px;}
+	.extext{width:1200px; display: flex; margin:auto; padding-top:60px; padding-bottom: 100px; color:black;}
+	li{display:inline-block;background: rgb(235, 236, 237);
+    width:220px; height:90px; font-size: 35px; margin: 0 83px;
+    border-radius: 100%; box-sizing: border-box;
+    text-align: center; line-height:80px;}
+    .f:hover{background:radial-gradient(circle, rgba(255,0,141,1) 0%, rgba(168,233,148,1) 100%); color:yellow;transition:all 0.3s; box-shadow: white 2px 4px 10px inset;}
+    .s:hover{background:radial-gradient(circle, rgba(255,239,0,1) 0%, rgba(148,187,233,1) 100%); color:blue; transition:all 0.3s; box-shadow: white 2px 4px 10px inset;}
+    .t:hover{background:radial-gradient(circle, rgba(0,4,255,1) 0%, rgba(255,213,165,1) 100%); color:red; transition:all 0.3s; box-shadow: white 2px 4px 10px inset;}
+   	.fight{width:90%; height:auto; padding-top:50px; }
+   	.re{position:relative;}
+   	.rel{max-width:1300px;height: auto; position:relative;}
+   	.abs{position:absolute; }
+   	.ab{position:absolute; top:890px; left:50px; width:79.3%; height:5%; z-index:100; left:143px;}
+   	.blend-mode-difference {
+  	mix-blend-mode: difference;
+	}
+
+   	.ab1{position:absolute; top:1200px; left:50px; width:10%; height:auto;}
+   	@keyframes burn {
+	  from {
+	    opacity: 1;
+	  }
+	  to {
+	    opacity: 0;
+	    transform: translateY(-100%);
+	  }
+	}
+	.burning-text {
+	  animation: burn 2s linear infinite;
+	padding-right:80px; text-align:right;}
+	.dot{padding-top:40px;}
+	.t1{height: 200px;
+		  display: grid;
+		  place-items: center;}
+   	.typing{
+		  width: 22ch;
+		  animation: typing 3s infinite steps(22), blink .5s infinite;
+		  white-space: nowrap;
+		  overflow: hidden;
+		  border-right: 3px solid;
+		  font-size: 1.6em; color:rgb(255, 37, 111);
+		  text-align:center;
+		  padding-top:10px; margin-top:15px;
+		}
+
+		@keyframes typing {
+		  from {
+		    width: 0
+		  }
+		}
+
+		@keyframes blink {
+		  50% {
+		    border-color: transparent
+		  }
+		}
+		
+    .blackblue{background:linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,58,255,1) 63%); padding-top:120px; padding-bottom: 50px;}
+    .bluegray{background:linear-gradient(180deg, rgba(0,58,255,1)0%, rgb(235, 236, 237)  63%); padding-top:50px; padding-bottom: 50px;}
+    .two{max-width:1300px; padding-top:80px;padding-bottom:50px;}
+    .bo1{padding-bottom: 20px;}
+    .sticky1{position:sticky;bottom:20px;}
+    .ban{padding-left:200px; text-align:left; padding-bottom:50px;}
+    .one img:hover {transform: scale(1.2);transition-timing-function:cubic-bezier(.64,.19,.42,.78);}
+    .bluebox{max-width:1300px;height:150px; margin-bottom: 100px;}
+    .three{max-width:1200px; padding-top:100px; padding-bottom:150px; margin:auto;}
+  
+    .subtitle{font-weight:bold; font-size: 38px;color:rgb(0, 58, 255);}
+    .graytext{font-weight:medium; font-size:20px;color:dimgray;margin-top:-10px; text-align:left;}
+    .left1{margin-left:420px;}
+    .gif1{margin:auto;margin-top:-230px; width:90%}
+    .left2{margin-left:-500px;}
+    .gif2{margin-top:-370px;margin-left:300px; padding-bottom:200px; width:50%; height:50%;}
+   	.left3{margin-left:200px;}
+   	.left4{margin-left:450px;}
+    .left5{margin-left:230px;}
+    .gif3{margin-top:-450px;margin-left:-450px; padding-bottom:200px; width:80%; height:80%;}
+    .four{margin-top:-400px; padding-bottom:150px;}
+    .warning{font-weight:medium; font-size:20px;color:dimgray;padding-top:100px; padding-bottom: 150px;}
+    .wt{font-weight:medium; font-size:20px;color:lightgray;margin-top:-10px;}
+    .wgif{width:35%; padding-bottom:100px;}
+    .pinktext{font-weight:bold; font-size: 38px;color:rgb(255, 37, 111);}
+    .gtext{font-weight:medium; font-size:20px;color:gray;margin-top:-10px;}
+    .gifleft{padding-right:100px;}
+    .four img:hover {filter: grayscale(100%);}
+    .blueme{background-color:rgb(0, 58, 255);max-width:100%; height: 250px; margin-top:-50px;}
+    .dm{width:310px; margin-left:-600px; margin-top:-20px; }
+    .dmtext{font-weight:bold; font-size: 38px;color:white; padding-top:100px;margin-left:100px;}
+    .five{max-width:1500px; margin:auto; padding-top:150px; margin-bottom:-750px;}
+    .messagebox{width:90%; display: block; margin:auto;}
+    .messagetext{ font-size: 38px; margin-top: -1200px; margin-left:150px;
+  		text-align:left;
+  		z-index: 1; font-family: 'GmarketSans'; line-height:100px;letter-spacing: 2px;}
+
+	span {position: relative; top: 20px;}
+	.emo{width:56px;}
+  	.sticky2{position:sticky;z-index: 10; width:1356px; margin-top:650px;}
+  	.ja{margin-left:400px;margin-bottom: 200px;}
+  	.six{max-width:1200px; padding-top:200px; padding-bottom:600px; perspective:1600px;}
+  	.bo2{padding-bottom:100px;}
+  	.donebox{width:800px; height:500px;
+  	border: 1px solid black;
+  	border-radius: 50px; transition: transform 10s ease;
+  	animation: donebox 5s infinite; position:absolute; margin-left:200px;}
+  	.halfcar{width:70%;margin-left:-380px; margin-top:25px; margin-top:-70px}
+  	.ht{font-size:40px;font-weight:500; margin-left:450px; margin-top:-500px; text-align:left; padding-bottom:50px;padding-top: 20px;}
+  	.htt{font-size:18px; margin-left:450px; margin-top:0px; text-align:left;}
+
+  	@keyframes donebox {
+	  0% {
+	    transform: rotateY(0deg);
+	  }
+	  50% {
+	    transform: rotateY(180deg);
+	  }
+	  100% {
+	    transform: rotateY(360deg);
+	  }
+	}
+	.ver{writing-mode: vertical-lr; margin-top: -330px; margin-left:25px;
+  	 font-size:20px; color:gray; }
+  	 .graypink{ background: linear-gradient(180deg, rgba(235,236,237,1) 0%, rgba(255,37,111,1) 75%, rgba(235,236,237,1) 99%); }
+  	 .seven{max-width:1200px; padding-top:200px; padding-bottom:100px;height:650px; }
+
+  	 .seven img{position:absolute;}
+  	 @keyframes slide-up {
+	  0% {
+	    opacity: 1;
+	    transform: translateY(0);
+	  }
+	  100% {
+	    opacity: 0;
+	    transform: translateY(-300px);
+	  }
+	}
+  	.emo1{
+  	position: relative; 
+  	animation: slide-up 3s ease-out infinite;}
+  	.eight{max-width:1200px;padding-top:200px; padding-bottom: 200px;}
+  	.eight a{font-weight:medium; font-size: 30px;color:white; box-sizing: border-box; padding-top:20px; height:80px;}
+  	.bu1{display:inline-block; width:250px; background-color:rgb(255, 37, 111); height: 100px; margin:0px 30px;} 
+  	.bu2{display:inline-block; width:350px; background-color:rgb(255, 37, 111); height: 100px; margin:0px 30px;}
+  	.eight a:hover{ background-color:rgb(0, 58, 255);}
+  	footer {
+  		background: linear-gradient(180deg, rgba(235,236,237,1) 60%, rgba(0,58,255,1) 100%); margin-bottom:-20px;}
+
+  	.foo{max-width:800px;}
+
+  	footer p{color: white;padding-top:200px; font-size:20px; text-align: center;}
+	</style>
+</head>
+<body>
+	<div class="navbar">
+		<nav id="navigation">
+		  <ul>
+		    <li class="navbox"><a href="index.html"class="a">반띵</a></li>
+		    <li><a href="#1">service</a></li>
+		    <li><a href="#2">caution</a></li>
+		    <li><a href="#3">process</a></li>
+		    <li><a href="#4">application</a></li>
+		    <li class="navbox"><a href="archive.html" target="_blank" class="a">아카이브</a></li>
+		  </ul>
+		</nav>
+	</div>
+	<section>
+
+		
+		<img src="./img/car.gif" width="100%" class="car">
+		<header>
+			<h1 class="bluetext">반띵<br>서비스</h1>
+			<div class="box1">
+				<p class="box1text"><em>사랑했었던</em> 내 님과의 물건 정리 서비스</p>
+			</div>
+		</header>
+	</section>
+	<section class="black re">
+		<div class="one white">
+			<div class="happy one">
+			<p class="titletext">행복할 줄만 알았던 그 사람과의 결혼 생활</p>
+			<p class="dot">.</p>
+			<p class="dot">.</p>
+			<p class="dot">.</p>
+		</div>
+		<div class="ex">
+			<img src="./img/people2.png">
+			<img src="./img/people3.png">
+			<img src="./img/people1.png">
+		</div>
+		<div class="extext">
+			<div>
+				<li class="f">돈 문제</li>
+				<li class="s">불륜</li>
+				<li class="t">성격 차이</li>
+			</div>
+		</div>
+		
+	</section>
+	<section class="blackblue">
+		<div class="rel">
+			<p class="titletext white burning-text">꿈에 그리던 부부 생활이<br>
+			완전 박살 났다구요?</p>
+			<img src="https://media4.giphy.com/media/xbQVno51Apxok/giphy.gif?cid=ecf05e476nzx0rcm94grcgwqwlhtbzqs1pnvj92yxplxjugo&rid=giphy.gif&ct=g" class="fight blend-mode-difference">
+			
+		</div>
+	</section>
+	<section class="bluegray">
+		<div class="two re">
+			<p class="titletext ban">같이 샀던 것들...</p>
+			<img src="./img/house.png" class="bo1">
+			<img src="./img/textbox.png" width="71%" class="sticky1">
+		</div>	
+	</section>	
+	<section class="blue">
+		<div class="bluebox t1" id="1">
+			<p class="typing">반띵 서비스는 말이죠~</p>
+		</div>
+	</section>
+	<section>
+		<div class="three">
+			<div>
+				<p class="subtitle">정확히 <mark>반</mark>으로 나눕니다</p>
+				<p class="graytext left1">0.000001mm의 오차도<br> 용납하지 않아요.</p>
+				<img src="./img/gif2.gif" class="gif1">
+			</div>
+			<div>
+				<p class="subtitle left2">어떤 고철 덩어리도<br><mark>깔끔</mark>하게 자릅니다</p>
+				<p class="graytext left3">무조건 깔끔하게 자르는 것이<br>저희의 제1 원칙입니다.<br>그래야 미련도<br>깔끔하게 사라지니까요.
+			</div>
+			<img src="./img/gif1.gif" class="gif2">
+			<div class="left4">
+				<p class="subtitle"><mark>무료</mark>로 작업합니다</p>
+				<p class="graytext left5">돈은 받지 않습니다.<br>대신 서비스를 이용하신<br>흔적이 남아요.<br>(반띵 아카이브)
+				</div>
+			<img src="./img/gif3.gif" class="gif3">
+			</div>
+	</section>
+	<section class="black">
+		<div class="four" id="2">
+			<p class="warning">서비스를 이용하기 전<br> 몇가지 주의사항이 있어요.</p>
+			<p class="pinktext">한 번 자른 것은 다시<br>되돌릴 수 없어요</p>
+			<p class="wt">과거는 과거일뿐 미련 갖지 마세요.<br> 한 번 망친 관계는 되돌릴 수 없답니다.<p>
+			<img src="./img/bond.gif" class="wgif">
+			<p class="pinktext">물건 이외의 것은<br>작업하지 않습니다</p>
+			<p class="wt">같이 키운 아이, 고양이, 강아지 등 생명체엔<br> 손을 대지 않습니다. 평생 사랑으로 키워주세요.<p>
+			<img src="./img/baby.gif" class="wgif gifleft">
+		</div>
+	</section>
+	<div class="blueme re" id="3">
+		<img src="./img/dm.gif" class="dm abs">
+		<p class="dmtext" >띠링~ 익명 A씨에게 의뢰가 왔어요!</p>
+	</div>
+	<section>
+		<div class="five re">
+			<img src="./img/letter1.png" class="messagebox">
+			<div class="messagetext">제 아내가 <span><img src="https://em-content.zobj.net/source/microsoft-teams/337/woman-blond-hair_1f471-200d-2640-fe0f.png" class="emo"> </span> 몇 달 전부터 안하던 화장을 <span><img src="https://em-content.zobj.net/source/microsoft-teams/337/lipstick_1f484.png" class="emo"></span> 하고 위아래 속옷을<br><span><img src="https://em-content.zobj.net/source/microsoft-teams/337/bikini_1f459.png" class="emo"></span> 맞춰 입더라구요. 아무렇지 않게 넘어 갔는데 <span><img src="https://em-content.zobj.net/source/microsoft-teams/337/thinking-face_1f914.png" class="emo"></span>오늘 그녀가<br>XX호프 <span><img src="https://em-content.zobj.net/source/microsoft-teams/337/beer-mug_1f37a.png" class="emo"></span> 앞에서 다른 남자와 함께 뽀뽀하는 <span><img src="https://em-content.zobj.net/source/microsoft-teams/337/mouth_1f444.png" class="emo"></span> 장면을 목격했<br>어요. 첫사랑이자 마지막 사랑 <span><img src="https://em-content.zobj.net/source/microsoft-teams/337/broken-heart_1f494.png" class="emo"></span> 인 줄 알았는데 이젠 꼴도 보기<br>싫어요. <span><img src="https://em-content.zobj.net/source/microsoft-teams/337/man-facepalming-light-skin-tone_1f926-1f3fb-200d-2642-fe0f.png" class="emo"></span>어제 이혼 서류 밟았고 이제 더러웠던 기억은 잊어 버리고<br>새 삶을 살 거예요. 그런데 <span><img src="https://em-content.zobj.net/source/microsoft-teams/337/collision_1f4a5.png" class="emo" ></span> 같이 샀던 XXX로버 풀옵션 자동차가 <br><span><img src="https://em-content.zobj.net/source/microsoft-teams/337/sport-utility-vehicle_1f699.png" class="emo"></span> 눈에 밟히네요. 그 사람이 자기가 갖겠다고 개소리<span><img src="https://em-content.zobj.net/source/microsoft-teams/337/dog-face_1f436.png" class="emo"></span> 하던데<br> 저는 그 꼴 못 봅니다.반으로 쪼개든 세등분으로 쪼개든 빠른 시일<br>내에 <span><img src="https://em-content.zobj.net/source/microsoft-teams/337/alarm-clock_23f0.png" class="emo"></span> 처분해주시길 간절히 원합니다.
+			</div>
+			
+		</div>
+		<img src="./img/letter2.png" class="sticky2" style="bottom:-350px;" >
+	</section>
+	<section>
+		<div class="six re">
+			<p class="typing pinktext ja">자 이제 자르러 가볼까요?</p>
+     		<iframe width="1120" height="630" src="https://www.youtube.com/embed/mYmh_ORgxJ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="bo2"></iframe>
+     		<div class="donebox">
+     			<img src="./img/im4.png" class="halfcar">
+     			<p class="ht">Full-Option
+     				<br>Domestic-Car</p>
+     			<p class="htt">가격 : 46,800,000,000원</p>
+     			<p class="htt">결혼 날짜 : 2018.06.01</p>
+     			<p class="htt">이혼 날짜 : 2023.06.01</p>
+     			<p class="htt">결혼 유지 기간 : 5년</p>
+     			<p class="htt"><mark>이혼 사유</mark> : 와이프의 바람</p>
+     			<p class="ver">Full-Option Domestic-Car</p>
+     		</div>
+    </section>
+    <section class="graypink">
+    	<div class="seven re">
+    		<p class="pinktext">사용자 98%가 만족했습니다!</p>
+    		<img src="./img/review1.png" style="width:300px; margin-left:200px; margin-top:50px;">
+    		<img src="./img/review2.png" class="revi" style="width:550px; margin-left:-550px; margin-top:200px;">
+    		<img src="./img/review3.png" class="revi" style="width:300px; margin-left:200px; margin-top:400px;">
+    		<img src="https://em-content.zobj.net/source/microsoft-teams/337/smiling-face-with-hearts_1f970.png"style="top: 400px; left:105px; width:15%;" class="emo1">
+
+    	</div>
+    </section>
+    <section>
+    	<div class="eight"  id="4">
+    		<a class="bu1" style="margin-top:40px;">신청하기</a> 
+    		<a href="archive.html" target="_blank" class="bu2" style="text-decoration: none;">반띵 아카이브 보러가기</a>
+    	</div>
+    </section>
+    <footer>
+    	<div class="foo">
+    		<img src="https://em-content.zobj.net/thumbs/120/twitter/348/broken-heart_1f494.png" style="width:3%; margin-bottom:-200px;">
+    		<p style="margin-bottom:-50px;">contact&nbsp;&nbsp;&nbsp;&nbsp;hyodoreu_u</p>
+    	</div>
+    </footer>
+</body>
+</html>

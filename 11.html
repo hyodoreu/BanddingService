@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>eleven</title>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+	<style type="text/css">
+	html{font-family: 'Noto Sans KR', sans-serif; font-size:30px; text-align:center;scroll-behavior: smooth;}
+	body{margin:0; padding:0; background-color:rgb(235, 236, 237);position:relative; margin-bottom:0; scroll-behavior: smooth;}
+	body{cursor:url('./img/heart.png'), auto;}
+	div{margin:auto;}
+	.main{max-width:1200px; padding-top:100px; padding-bottom:600px; perspective:1600px;}
+  	.bo2{padding-bottom:100px;}
+  	.donebox{width:800px; height:500px;
+  	border: 1px solid black;
+  	border-radius: 50px; transition: transform 10s ease;
+  	animation: donebox 5s infinite; position:absolute; margin-left:200px;}
+  	.half{width:60%;margin-left:-600px; margin-top:10px}
+  	.ht{font-size:40px;font-weight:500; margin-left:400px; margin-top:-490px; text-align:left; padding-bottom:50px;padding-top: 15px;}
+  	.htt{font-size:18px; margin-left:400px; margin-top:0px; text-align:left;}
+
+  	@keyframes donebox {
+	  0% {
+	    transform: rotateY(0deg);
+	  }
+	  50% {
+	    transform: rotateY(180deg);
+	  }
+	  100% {
+	    transform: rotateY(360deg);
+	  }
+	}
+
+	.ver{writing-mode: vertical-lr; margin-top: -330px; margin-left:25px;
+  	 font-size:20px; color:gray; }
+  	 .donebox:hover {animation-play-state: paused;
+	</style>
+</head>
+<body>
+	<section>
+		<div class="main re">
+     		<div class="donebox">
+     			<img src="./img/11half.png" class="half">
+     			<p class="ht" style="">LEICA-Camera</p>
+     			<p class="htt">가격 : 2,887,000원</p>
+     			<p class="htt">결혼 날짜 : 1999.03.01</p>
+     			<p class="htt">이혼 날짜 : 2020.06.13</p>
+     			<p class="htt">결혼 유지 기간 : 21년 3개월 12일</p>
+     			<p class="htt"><mark>이혼 사유</mark> : 남편이 당근마켓 거래자와 바람 핌</p>
+     			<p class="ver" style="margin-top:-210px;">LEICA-Camera</p>
+     		</div>
+    </section>
+</body>
+</html>
